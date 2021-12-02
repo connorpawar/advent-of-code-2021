@@ -1,5 +1,5 @@
 {
-    "name":"default dev configuration",
-    "type":"default",
-    "environment":"dev"
-  }
+  "name": "default dev configuration",
+  "type": "default",
+  "environment": "dev"
+}
