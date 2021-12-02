@@ -9,7 +9,7 @@ export const day01 = async () => {
   const hasIncreased = (prev: number, current: number) => current > prev;
 
   // Functional for challenge 1
-  pipe(
+  await pipe(
     input,
     scan(
       (pre: number, cur: number, i) =>
@@ -21,7 +21,7 @@ export const day01 = async () => {
   );
 
   // Functional for challenge 2
-  pipe(
+  await pipe(
     input,
     scan(
       (pre: number, cur: number, i) =>
