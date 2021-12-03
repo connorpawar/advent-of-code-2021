@@ -1,12 +1,12 @@
 import { last, pipe, read, scan } from "../lib/index.ts";
 
-export const day02 = async () => {
+export const run = async () => {
   console.group("Answers for day 2:");
   const input: [string, number][] = (await read("./src/inputs/02.txt")).trim().split("\n").map(
     instruction => [instruction.split(' ')[0], Number(instruction.split(' ')[1])]
   );
 
-  // Functional for challenge 1
+  // Challenge 1
   await pipe(
     input,
     scan(
@@ -27,10 +27,11 @@ export const day02 = async () => {
       [0, 0],
     ),
     last(),
+    ([x, y]: [number, number]) => x * y,
     console.log,
   );
 
-    // Functional for challenge 2
+    // Challenge 2
     await pipe(
         input,
         scan(
@@ -51,12 +52,11 @@ export const day02 = async () => {
         },
           [0, 0, 0],
         ),
-        last(),
+        last<[number, number, number]>(),
+        ([x,y,_z]: [number, number, number]) => x * y,
         console.log,
       );
 
   console.groupEnd();
   console.log("\n");
 };
-
-day02();

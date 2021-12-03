@@ -1,5 +1,3 @@
-export type Constructor<T> = new (...args: unknown[]) => T;
-
 export type ForOfAwaitable<T> = AsyncIterable<T> | Iterable<T>;
 export type ForOfAwaitableIterator<T> =
   | AsyncIterableIterator<T>

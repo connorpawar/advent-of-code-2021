@@ -1,6 +1,6 @@
 import { last, pipe, read, scan } from "../lib/index.ts";
 
-export const day01 = async () => {
+export const run = async () => {
   console.group("Answers for day 1:");
   const input = (await read("./src/inputs/01.txt")).trim().split("\n").map(
     Number,
@@ -41,5 +41,3 @@ export const day01 = async () => {
   console.groupEnd();
   console.log("\n");
 };
-
-day01();
